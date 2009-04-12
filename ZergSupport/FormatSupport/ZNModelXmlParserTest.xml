@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+  <ZNXmlParserTestModel>
+    <theName>First name</theName>
+    <number>3.141592</number>
+    <boolean>YES</boolean>
+  </ZNXmlParserTestModel>
+  <itemA>
+    <keyA>A prime</keyA>
+    <keyB>B prime</keyB>
+  </itemA>
+  <ZNXmlParserTestModel>
+    <the_name>Second name</the_name>
+    <number>64</number>
+    <boolean>NO</boolean>
+  </ZNXmlParserTestModel>  
+</testdata>

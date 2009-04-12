@@ -1,0 +1,18 @@
+All the code in the ZerglingNet libraries, except for the Google Toolbox for Mac
+code in TestSupport, is released under the MIT license, contained in the file
+MIT-LICENSE. Files not licensed under the MIT license are clearly marked as
+such.
+
+
+TestSupport contains code from the Google Toolbox for Mac, which is copyrighted
+to Google Inc., and is released under the Apache License, Version 2.0, contained
+in the file TestSupport/GTM/COPYING.
+
+
+NOT TO BE TAKEN AS LEGAL ADVICE: you should be able to safely ignore the
+Apache License in TestSupport, as long as:
+(1) you only #include "TestSupport.h" in your test code
+(2) your release binaries don't contain any test code
+(3) you don't plan to sue Google
+
+All 3 points look like good development practices.

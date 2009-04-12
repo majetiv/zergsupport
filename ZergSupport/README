@@ -1,0 +1,84 @@
+ZergSupport is a toolkit for iPhone OS applications that communicate with Web
+services. As a toolkit, the ZergSupport library provides a collection of classes
+designed to simplify certain tasks. The library does not impose an application
+design philosophy like a framework would, and it does not extend Apple-supplied
+classes, so it can coexist with other framework code. ZergSupport is liberally
+licensed under the OSI-approved non-viral MIT license.
+
+The ZergSupport code is restricted to methods in the official SDK, so that it
+can be used in App Store applications. The initial version of ZergSupport is
+used by in StockPlay, which passed Apple's approval process, and is currently
+ready for sale in the App Store.
+
+The code in ZergSupport is completely covered by tests, which also serve as
+usage examples. The rest of this README provides a conceptual map of the code.
+
+
+INSTALLATION
+
+An easy method for incorporating ZergSupport is using the zerg_xcode tool, which
+was written with this express purpose. The generic method for incorporating
+library code using zerg_xcode is described in detail at:
+
+http://blog.costan.us/2009/02/iphone-development-and-code-sharing.html
+
+
+TARGETS
+
+ZergSupport provides 3 targets:
+* ZergSupport includes "production" code that should be shipped with iPhone
+  applications using the library. This library should be included in the iPhone
+  application target.
+* ZergTestSupport includes ZergSupport, and adds code that can be helpful in
+  writing your own tests. This library should be included in test targets. The
+  test targets do not need to include ZergSupport directly.
+* ZergSupportTests contains the test code for the ZergSupport toolkit. The test
+  cases have been separated from ZergTestSupport so you don't have to run them
+  every time you change your own code.
+
+
+SERVICES
+
+ModelSupport tries to fill the gap Apple created by leaving out Core Data. Model
+classes inherit from ZNModel, and specify their attributes by declaring
+properties. ModelSupport models are designed with Web interaction in mind, and
+therefore can handle attributes that are not specified are development time.
+These attributes are preserved during serialization and deserialization, so
+they can be used in future versions of the application, and when exchanging
+models with Web services or other applications.
+
+WebSupport is a one-method API for asynchronous data exchange with Web services.
+It can encode parameters into the format that makes HTTP servers happy, and
+it decodes responses in multiple formats (currently XML, CSV, and raw data). The
+API seamlessly encodes and decodes ModelSupport models, and transparently
+supports local: URLs, which wouldn't work with NSURLConnection.
+
+ControllerSupport has reusable logic for controllers communicating with Web
+servers. Currently, it provides reusable data synchronization logic, and a
+NSView-independent implementation of the Target-Action model.
+
+FormatSupport is the string crunching backend of WebSupport. It's responsible
+for encoding to x-www-url-encoded, decoding from XML and CSV, and converting
+between different casing conventions.
+
+TestSupport offers a healthy foundation for testing, by packing the necessary
+subset of the Google Toolbox for Mac. On top of that, it supports Rails-like
+fixtures for ModelSupport models. TestSupport is only included in the testing
+targets, so you don't have to worry about the APL license that comes with
+Google's code.
+
+
+CONTRIBUTING
+
+If you find ZergSupport useful, and want to give back, the easiest way is to
+improve the existing documentation. The next step up is implementing new
+functionality, or fixing bugs. This can be demanding, because I care a lot about
+maintaining full test coverage. To compensate for that, I will be happy to help
+out with directions and ideas, or brainstorm on means of testing new code. You 
+must be prepared to assign the copyright of your contributions to Zergling.Net,
+and have your code released under the MIT license, to keep licensing legals
+simple for ZergSupport's users. 
+
+If your employment conditions or philosophy prevent you from contributing to
+ZergSupport by development, you can buy StockPlay from the App Store, and thus
+contribute indirectly.

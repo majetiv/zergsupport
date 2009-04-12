@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fixtures>
+  <zn_fixture_test_model1>
+    <name>First Name</name>
+    <cash>3.141592</cash>
+  </zn_fixture_test_model1>
+  <zn_fixture_test_model2>
+    <nope>NO</nope>
+  </zn_fixture_test_model2>
+  <ZNFixtureTestModel1>
+    <name>Third Name</name>
+    <cash>1</cash>
+  </ZNFixtureTestModel1>
+</fixtures>

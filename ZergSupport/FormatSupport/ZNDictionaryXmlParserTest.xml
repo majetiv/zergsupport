@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata version="0.1">
+<trash>
+  <keyA>
+    fail
+  </keyA>
+  <keyB>
+    fail
+  </keyB>
+</trash>
+<itemA>
+  <keyA>A prime</keyA>
+  <keyB>B prime</keyB>
+</itemA>
+<itemB>
+  <keyA>not in schema</keyA>
+  <keyB>B second</keyB>
+</itemB>
+<itemA>
+  <keyC>Entity fun &#39;&gt;</keyC> 
+  <keyB>B third</keyB>
+</itemA>
+<itemD>
+  <key_one>value_one</key_one>
+  <key_two>value_two</key_two>
+</itemD>
+</testdata>

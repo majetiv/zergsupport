@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<model>
+		<method>Method</method>
+		<body>Body</body>
+		<headers>Headers</headers>
+	</model>
+	<nonmodel>
+		<key1>val1</key1>
+		<key2>val2</key2>
+    <key_three>val3</keyThree>
+	</nonmodel>
+</response>
